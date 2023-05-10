@@ -42,31 +42,4 @@
       <process ref="prepareGoogleParameters"/>
       <to uri="google-sheets://data/update?clientId={{clientId}}&amp;clientSecret={{clientSecret}}&amp;accessToken={{accessToken}}&amp;refreshToken={{refreshToken}}&amp;spreadsheetId={{spreadsheetId}}"/>
     </route>
-
-
-    <!-- <route>
-    	<from uri="direct:send-to-sheets-via-HTTP"/>
-
-      <setBody>
-      	<simple>{"range":"E${exchangeProperty.row}:E${exchangeProperty.row}","majorDimension": "ROWS","values":[["${body}"]]}</simple>
-      </setBody>
-
-      <log message="google request:\n${body}"/>
-
-      <removeHeaders pattern="*"/>
-      <setHeader name="Content-Type">
-        <constant>application/json</constant>
-      </setHeader>
-      <setHeader name="Authorization">
-        <constant>Bearer YOUR_ACCESS_TOKEN_GOES_HERE</constant>
-      </setHeader>
-      <setHeader name="CamelHttpMethod">
-        <constant>PUT</constant>
-      </setHeader>
-      <log id="route-log" message=">>> ${body}"/>
-      <toD uri="https://sheets.googleapis.com/v4/spreadsheets/YOUR_SHEETS_DOC_ID_GOES_HERE/values/E${exchangeProperty.row}:E${exchangeProperty.row}?valueInputOption=USER_ENTERED"/>
-      <log message="response: ${body}"/>
-    </route> -->
-
-
 </routes>

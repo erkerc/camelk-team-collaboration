@@ -1,0 +1,2 @@
+bin/kafka-console-consumer.sh --bootstrap-server my-cluster-kafka-bootstrap:9092 --topic questions --from-beginning
+
