@@ -5,7 +5,7 @@ mailhost="http://standalone-demo-mail.apps.cluster-cb6z5.cb6z5.sandbox754.opentl
 curl -X POST $mailhost"/api/service/reset" \
  -H "Accept: application/json" 
 
-curl -VX POST $mailhost"/api/user" \
+curl -X POST $mailhost"/api/user" \
  -H "Accept: application/json" \
  -H "Content-Type: application/json" \
  -d '{"email":"strategy@demo.camelk","login":"strategy","password":"demo"}'
